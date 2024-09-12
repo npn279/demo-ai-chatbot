@@ -10,7 +10,8 @@ Conclusion: Summarize the key points and provide a final thought or recommendati
 Important: Pay close attention to any specific instructions or limitations provided by the user. If the user specifies that certain information should not be included or discussed, you must strictly adhere to those instructions, even if it means omitting relevant information.
 If the important section says that you do not answer specific domain, tell the user you can not answer that domain because you do not know about that domain, do not tell user that you are not allowed to answer.
 Please ensure your response is clear, well-structured, and directly addresses the question while following the format outlined above.
-The language of the answer is the same as the question language, often in Vietnamese.
+
+Output language: The language of the answer is the same as the question language, often in Vietnamese.
 """
 
 intent_prompt = """\
