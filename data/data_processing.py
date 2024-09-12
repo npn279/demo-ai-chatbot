@@ -6,6 +6,13 @@ import json
 
 from PyPDF2 import PdfReader
 
+from dotenv import load_dotenv
+load_dotenv()
+
+api_key = os.getenv("GEMINI_API_KEY")
+if not api_key:
+    api_key = os.environ['GEMINI_API_KEY']
+
 def read_pdf(file_path):
     """
     Read PDF file and return its content as a string.
@@ -160,9 +167,8 @@ def main(file_path, subject, api_key, output_file):
 
 # Example usage:
 if __name__ == "__main__":
-    file_path = "naive.txt"  # Change this to your file path
-    subject = "Sample Subject"
-    api_key = "..."  # Replace with your actual API key
+    file_path = "overfitting.txt"  # Change this to your file path
+    subject = "Overfitting"  # Subject of the content
     output_file = "output.json"  # Output file name
 
     main(file_path, subject, api_key, output_file)

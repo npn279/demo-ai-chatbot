@@ -173,7 +173,7 @@ def main():
 
     # Example question and chat ID (to simulate unique user or conversation session)
     question = "So sánh k-mean và CNN"
-    chat_id = 'user_4567fffff83333390'
+    chat_id = 'user_4567ffffff83333390'
     # Generate the final answer from the question
     final_answer = genAnswer(question, chat_id)
 
