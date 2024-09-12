@@ -172,8 +172,8 @@ def main():
     model = setup_model("gemini-1.5-flash", main_prompt, temperature=0.15)
 
     # Example question and chat ID (to simulate unique user or conversation session)
-    question = "So sánh k-mean và CNN"
-    chat_id = 'user_4567ffffff83333390'
+    question = "Singular Value Decomposition là gì?"
+    chat_id = 'user_4567ffff4ff83333390'
     # Generate the final answer from the question
     final_answer = genAnswer(question, chat_id)
 

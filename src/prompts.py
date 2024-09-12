@@ -46,6 +46,13 @@ Ouput example:
 }
 ```
 
+Note that if the question asks something that is not in the lesson content, add lesson id "other" to the 'id_lesson'.
+For example, the lesson content has CV001 about Edge Detection in computer vision, and the question is "what is the difference between edge detection and feature detection", the output should be:
+```json
+{
+    "class": "study",
+    "id_lesson": "CV001,other"
+}
 
 ### For the "other" category:
 - Respond appropriately for non-study-related questions.
