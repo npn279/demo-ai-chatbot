@@ -15,7 +15,7 @@ logging.basicConfig(level=logging.INFO)
 
 # Global variable for the model
 model = None
-chat_history_file = '../data/chat_history.json'
+chat_history_file = 'data/chat_history.json'
 
 
 def load_and_process_json(file_path):
@@ -103,7 +103,7 @@ def genAnswer(question, chat_id):
     """
 
     # Load lesson content from output.json
-    lesson_content = load_and_process_json('../data/output.json')
+    lesson_content = load_and_process_json('data/output.json')
 
     # Load chat history
     chat_history = load_chat_history()
@@ -130,8 +130,7 @@ def genAnswer(question, chat_id):
     class_intent = intent_result.get('class', 'study')
     constraint_prompt = intent_result.get('answer', '')
 
-    # Handle greeting or toxic responses
-    if class_intent == 'greeting' or class_intent == 'toxic':
+    if class_intent == 'other':
         response = intent_result.get('answer')
         save_chat_history(chat_id, question, response)
         return response

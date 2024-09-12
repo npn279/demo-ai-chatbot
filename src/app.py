@@ -10,7 +10,6 @@ import uuid
 
 from app_core import genAnswer
 
-
 def reset_chat():
     st.session_state.messages = []
     st.session_state.chat_id = str(uuid.uuid4())
